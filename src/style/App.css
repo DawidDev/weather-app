@@ -1,0 +1,360 @@
+body {
+  color: #fff;
+  background: rgb(8,34,39);
+  background: linear-gradient(90deg, rgba(8,34,39,1) 0%, rgba(0,0,0,1) 98%);
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.app-body {
+  padding-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-body header {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  color: #258CA4;
+  font-size: 85px;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+/* Styled FORM component */
+
+form {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form button, .resetSearch {
+  width: 340px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+form input {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: solid 3px #258CA4;
+  background: transparent;
+  color: #A5A5A5;
+}
+
+form button, .resetSearch {
+  background-color: #258CA4;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button:hover, .resetSearch:hover{
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #258CA4;
+  color: #258CA4;
+}
+
+/* Styled main section */
+
+main {
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+main .weather .result-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .weather .result-1 .icon-weather {
+  height: 100px;
+}
+
+main .weather .result-1 .time {
+  font-size: 18px;
+}
+
+main .weather .result-1 .temperature {
+  font-size: 90px;
+  margin: 0;
+  display: flex;
+}
+
+main .weather .result-1 .icon-weather img {
+  height: 100%;
+}
+
+main .weather h2 {
+  font-size: 50px;
+  margin: 0 0 0 10%;
+}
+
+main .weather hr {
+  width: 100%;
+  transform: translateX(-50%);
+  height: 5px;
+  background-color: #258CA4;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Styled main section -> RESULT component with hours */
+
+
+main .weather .swiper {
+  margin: 0 10px;
+  padding: 10px 0;
+}
+
+main .weather .box-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 110px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #212530;
+}
+
+main .weather .box-data .box-icon {
+  height: 50px;
+  margin: 5px 0;
+}
+
+main .weather .box-data .box-icon img {
+  height: 90%;
+}
+
+main .weather .box-data p {
+  margin: 0;
+  padding: 0;
+}
+
+main .weather .box-data p.box-hour {
+  color: #A5A5A5;
+  font-size: 13px;
+}
+
+main .weather .swiper:hover {
+  cursor: pointer;
+}
+
+/* Styled InfoDay component */
+.weather-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .info-day, main .info-week {
+  width: 380px;
+  min-height: 250px;
+  border-radius: 20px;
+  background-color: #212530;
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box; 
+}
+
+main .info-day .east-west {
+  display: flex;
+  justify-content: space-around;
+}
+
+main .info-day .progress-bar {
+  width: 90%;
+  height: 15px;
+  border-radius: 20px;
+  background-color: #A5A5A5;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+main .info-day .progress-bar .progress {
+  height: 100%;
+  background-color: #258CA4;
+}
+
+
+main .info-day table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main .info-day table td {
+  height: 50px;
+  padding: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+main .info-day table td.icon {
+  width: 70px;
+}
+
+main .info-day table td.title {
+  text-align: left;
+  padding-left: 10px;
+}
+
+main .info-day table td img {
+  height: 80%;
+}
+
+/* Styled InfoWeek component */
+
+main .info-week table {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  font-size: 14px;
+}
+
+main .info-week table td {
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+main .info-week table td.day {
+  width: 100px;
+  text-align: left;
+  padding-left: 5px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+main .info-week table td.icon {
+  width: 20px;
+}
+
+main .info-week table td.icon img {
+  height: 70%;
+  opacity: 0.7;
+}
+
+main .info-week table td.wind {
+  width: auto;
+  text-align: left;
+  opacity: 0.7;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+
+main .info-week table td.weather-icon {
+  width: 100px;
+}
+
+main .info-week table td img {
+  height: 100%;
+  margin-top: 5px;
+}
+
+main .info-week table td.temperature {
+  font-weight: 600;
+}
+
+/* Hover effects for InfoDay table */
+main .info-day table tr:hover, main .info-week table tr:hover {
+  color:#258CA4;
+  cursor: pointer;
+}
+
+/* Error page style */
+
+.error-page {
+  height: 250px;
+}
+
+.error-page .loading-block {
+  height: 170px;
+  overflow: hidden;
+}
+
+.error-page p {
+  margin: 0;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Animation Loading */
+
+.preloader,
+.preloader:before,
+.preloader:after {
+    background: #258CA4;
+    animation: animation 1s infinite ease-in-out;
+    width: 12px;
+}
+
+.preloader:before,
+.preloader:after {
+    position: absolute;
+    content: '';
+}
+
+.preloader:before {
+    left: -20px;
+    animation-delay: -0.32s;
+}
+
+.preloader {
+    margin: 65px auto 40px;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.preloader:after {
+    left: 20px;
+}
+
+@keyframes animation {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #258CA4;
+        height: 40px;
+    }
+    40% {
+        box-shadow: 0 -30px #258CA4;
+        height: 80px;
+    }
+}
+
+
