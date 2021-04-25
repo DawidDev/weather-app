@@ -32,7 +32,7 @@ class Result extends Component {
 
      handleDataFetch = () => {
          console.log("Downloading data");
-         const cityKey = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=O6d8dDlFJGUsAljKGI4lzKAxNomu6GJu&q=${this.state.search}`;
+         const cityKey = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=O6d8dDlFJGUsAljKGI4lzKAxNomu6GJu&q=${this.state.search}`;
          fetch(cityKey)
          .then(response => {
              if (response.ok) return response
@@ -43,7 +43,7 @@ class Result extends Component {
              const cityData = data
              const individualKeyCity = data[0].Key;
              console.log("Code of the city " + individualKeyCity);
-             const WeatherForCityRequest = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${individualKeyCity}?apikey=O6d8dDlFJGUsAljKGI4lzKAxNomu6GJu&details=true&metric=true`;
+             const WeatherForCityRequest = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${individualKeyCity}?apikey=O6d8dDlFJGUsAljKGI4lzKAxNomu6GJu&details=true&metric=true`;
              fetch(WeatherForCityRequest)
              .then(response2 => {
                  if (response2.ok) return response2
@@ -54,7 +54,7 @@ class Result extends Component {
                  console.log("Daily weather downloaded");
                  console.log(data2)
                  const dailyData = data2;
-                 const HourlyWeatherRequest = `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${individualKeyCity}?apikey=O6d8dDlFJGUsAljKGI4lzKAxNomu6GJu&details=true&metric=true`
+                 const HourlyWeatherRequest = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${individualKeyCity}?apikey=O6d8dDlFJGUsAljKGI4lzKAxNomu6GJu&details=true&metric=true`
                  fetch(HourlyWeatherRequest)
                  .then(response3 => {
                     if (response3.ok) return response3
