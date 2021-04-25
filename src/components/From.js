@@ -5,9 +5,9 @@ const Form = (props) => {
     return ( 
         <React.Fragment>
             <form onSubmit={props.handleSubmit} noValidate>
-                <p>Hello! Type in name of the city <br/>to check weather.</p>
+                <p>Witaj! <br/>Wpisz poniżej lokalizację aby sprawdzić pogodę.</p>
                 <input name="search" type="text"/>
-                <button>Check</button>
+                <button>Szukaj</button>
             </form>
         </React.Fragment>
      );

@@ -44,7 +44,7 @@ class App extends Component {
             {whatIShow}
           </main>
           <footer>
-            <p>Made by LUXX Creative Dawid Rożak</p>
+            <p>Made by L.C D.R.</p>
           </footer>
         </div>
       </React.Fragment>

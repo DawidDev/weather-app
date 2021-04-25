@@ -66,7 +66,20 @@ const DataBoxes = (props) => {
         </SwiperSlide>
     ))
     return(
-        <Swiper className="swiper" spaceBetween={5} slidesPerView={5} navigation pagination={{ clickable: true }} scrollbar={{ draggable: true }}>
+        <Swiper className="swiper" 
+        spaceBetween={3} 
+        slidesPerView={4} 
+        breakpoints={{
+            520: {
+                slidesPerView: 5
+            },
+            1040: {
+                slidesPerView: 8
+            }
+        }} 
+        navigation 
+        pagination={{ clickable: true }} 
+        scrollbar={{ draggable: true }}>
             {weatherPerHour}
         </Swiper>
     )
